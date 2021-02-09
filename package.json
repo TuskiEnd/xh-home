@@ -16,10 +16,12 @@
     "author": "feikool@sina.com",
     "license": "MIT",
     "dependencies": {
+        "@antv/g2": "^4.1.10",
         "autoprefixer": "^9.5.1",
         "cross-env": "^5.2.0",
         "cssnano": "^4.1.10",
         "dayjs": "^1.10.4",
+        "echarts": "^5.0.2",
         "http-server": "^0.11.1",
         "jquery": "^3.4.0",
         "mini-css-extract-plugin": "^0.6.0",

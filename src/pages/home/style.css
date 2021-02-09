@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* timeline */
+#timeline {
+  width: 80%;
+  height: 2.8vw;
+  overflow: hidden;
+  position: absolute;
+  z-index: 999;
+  bottom: 18%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: url('../../images/dot.gif') left 2.5vw repeat-x;
+}
+
+#dates {
+  width: 80%;
+  height: 2.8vw;
+  overflow: hidden;
+}
+
+#dates li {
+  float: left;
+  width: 5vw;
+  height: 2.8vw;
+  font-size: 0.5vw;
+  text-align: center;
+  background: url('../../images/biggerdot.png') center bottom no-repeat;
+}
+
+#dates a {
+  line-height: 1.2vw;
+  color: #aaa;
+}
+
+#dates .selected {
+  font-size: 1.2vw;
+  color: #FFCE34;
+}
+
+#issues {
+  width: 800px;
+  height: 350px;
+  overflow: hidden;
+}
+
+#issues li {
+  width: 800px;
+  height: 350px;
+  float: left;
+}
+
+#issues li img {
+  float: left;
+  margin: 10px 30px 10px 50px;
+}
+
+#issues li h1 {
+  color: #ffcc00;
+  font-size: 1vw;
+  margin: 0.5vw 0;
+  text-shadow: #000 1px 1px 2px;
+}
+
+#issues li p {
+  font-size: 14px;
+  margin-right: 70px;
+  font-weight: normal;
+  line-height: 22px;
+  text-shadow: #000 1px 1px 2px;
+}
+
+#grad_left, #grad_right {
+  width: 100px;
+  height: 350px;
+  position: absolute;
+  top: 0;
+}
+
+#grad_left {
+  left: 0;
+  background: url('../../images/grad_left.png') repeat-y;
+}
+
+#grad_right {
+  right: 0;
+  background: url('../../images/grad_right.png') repeat-y;
+}
+
