@@ -17,7 +17,7 @@
         <div class="split-line"></div>
         <div class="title">信弘智慧运维管理平台</div>
         <div class="split-line"></div>
-        <div class="sub-title">智能运维</div>
+        <div class="sub-title">国际大厦能耗热力图</div>
     </div>
     <div class="flex-right">
         <div class="date">
@@ -117,6 +117,9 @@
         <div class="chart-wrap chart3-wrap" style="height: 28vh" id="chart4"></div>
     </div>
 </main>
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script type="text/javascript" src="<%=htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
 </body>
 
 </html>

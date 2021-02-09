@@ -1,9 +1,10 @@
-import './index.scss';
-import dayjs from 'dayjs';
-import isoWeek from 'dayjs/plugin/isoWeek';
-import * as echarts from 'echarts';
-import '../../utils/jquery.timelinr-0.9.3';
-import './style.css';
+require('./index.scss');
+
+const dayjs = require('dayjs');
+const isoWeek = require('dayjs/plugin/isoWeek');
+const echarts = require('echarts');
+require('../../utils/jquery.timelinr-0.9.3');
+require('./style.css');
 
 
 //当前视口宽度
@@ -16,7 +17,8 @@ function nowSize(val, initWidth = 1920) {
 
 
 let makeOthersTranslucent;
-let viewToken = 'e74ce468e2dd43c18964fe6d5cc8581e';
+// let viewToken = 'e74ce468e2dd43c18964fe6d5cc8581e';
+let viewToken = '';
 // 声明Viewer及App
 let viewer3D;
 let app;
@@ -63,7 +65,7 @@ function getModelToken(accessToken) {
     headers: {
       Authorization: `bearer ${accessToken}`
     },
-    url: 'https://api.bimface.com/view/token',
+    url: '/api/view/token',
     data: {
       fileId: '2051285170694464',
     },
@@ -80,10 +82,9 @@ function getAccessToken() {
   $.ajax({
     type: 'POST',
     headers: {
-      test: '111',
       Authorization: signature()
     },
-    url: 'https://api.bimface.com/oauth2/token',
+    url: '/api/oauth2/token',
     data: {
       AppKey,
       AppSecret,
@@ -1010,7 +1011,7 @@ $(function () {
   initCircleChart();
   getAccessToken();
   $().timelinr();
-  initBIMInfo();
+  // initBIMInfo();
   $('.clockSet').click(function () {
     const colors = $(this).data().set;
     if (colors) {
