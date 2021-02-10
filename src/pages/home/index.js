@@ -388,7 +388,7 @@ option2 = {
         color: '#aaa'
       },
       min: 0,
-      max: 12000,
+      max: 14000,
       interval: 3000,
       axisLabel: {
         formatter: '',
@@ -405,7 +405,6 @@ option2 = {
       max: 14000,
       interval: 3000,
       axisLabel: {
-        // formatter: '{value} °C',
         color: '#aaa'
       }
     }
@@ -413,14 +412,52 @@ option2 = {
   series: [
     {
       name: '2019全年',
-      type: 'bar',
-      data: [6000, 8001, 8901, 9000, 9600, 10200, 11000, 11010, 11300, 8100, 7880, 8600]
+      type: 'line',
+      data: [6000, 8001, 6000, 9000, 6500, 10200, 7000, 11010, 7500, 11000, 7880, 12340],
+      smooth: true,
+      areaStyle: {
+        opacity: 0.8,
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 1,
+            color: 'rgba(1, 191, 236, 0.01)'
+          },
+          {
+            offset: 0,
+            color: 'rgba(1, 191, 236,0.6)'
+          }
+        ])
+      },
+      lineStyle: {
+        width: nowSize(3),
+      },
     },
     {
       name: '2020全年',
       type: 'line',
       yAxisIndex: 1,
-      data: [6500, 10090, 10200, 10900, 11222, 12199, 12993, 13102, 13090, 12000, 11003, 10201]
+      smooth: true,
+      data: [8001, 6000, 9000, 6500, 10200, 7000, 11010, 7500, 11000, 7880, 12340, 8765],
+      lineStyle: {
+        width: nowSize(3),
+        color: 'rgba(1, 191, 236)'
+      },
+      itemStyle: {
+        color: 'rgba(1, 191, 236)'
+      },
+      areaStyle: {
+        opacity: 0.8,
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 1,
+            color: 'rgba(1, 191, 236, 0.01)'
+          },
+          {
+            offset: 0,
+            color: 'rgba(1, 191, 236,0.6)'
+          }
+        ])
+      },
     }
   ],
   grid: {
@@ -628,7 +665,7 @@ option3 = {
       },
       markLine: {
         data: [{
-          yAxis: 600,
+          type: 'average',
           coord: [0, 0.3],
           label: {
             formatter: '',
@@ -713,19 +750,19 @@ let chartOption = {
           x2: 100,
           y2: 0,
           colorStops: [{
-            offset: 0, color: '#0099FF' // 0% 处的颜色
+            offset: 0, color: '#A9CFF5' // 0% 处的颜色
           },
             {
-              offset: 0.25, color: '#00CC99' // 0% 处的颜色
+              offset: 0.25, color: '#83ABE9' // 0% 处的颜色
             },
             {
-              offset: 0.5, color: '#00CC99' // 0% 处的颜色
+              offset: 0.5, color: 'rgba(1, 191, 236)' // 0% 处的颜色
             },
             {
-              offset: 0.75, color: '#FF6666'
+              offset: 0.75, color: '#F9834F'
             },
             {
-              offset: 1, color: '#FF6633' // 100% 处的颜色
+              offset: 1, color: '#FB5047' // 100% 处的颜色
             }],
           global: true // 缺省为 false
         }
@@ -943,7 +980,7 @@ option5 = {
   legend: {
     orient: 'vertical',
     left: 'right',
-    top: 'center',
+    top: 'bottom',
     textStyle: {
       fontSize: nowSize(12),
       color: '#aaa'
@@ -954,9 +991,11 @@ option5 = {
       name: '',
       type: 'pie',
       radius: '70%',
+      hoverAnimation: false,
       label: {
         color: '#aaa',
-        fontSize: nowSize(14)
+        fontSize: nowSize(14),
+        formatter: '{b}: {@[c]} ({d}%)'
       },
       data: [
         { value: 948, name: '公区' },

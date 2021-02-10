@@ -46,80 +46,80 @@
         </a>
     </div>
 </header>
-<main class="content">
-    <div class="left">
-        <div class="chart-wrap chart-circle-wrap">
-            <h4 class="chart-circle-title">
-                今日用电分类
-            </h4>
-            <div class="chart-circle">
-                <div class="circle-item" id="chartCircle1"></div>
-                <div class="circle-item" id="chartCircle2"></div>
-                <div class="circle-item" id="chartCircle3"></div>
-            </div>
-            <div class="chart-circle">
-                <div class="circle-item" id="chartCircle4"></div>
-                <div class="circle-item" id="chartCircle5"></div>
-                <div class="circle-item" id="chartCircle6"></div>
-            </div>
-        </div>
-        <div class="today">
-            <div class="today-inner">
-                <h5>今日用电</h5>
-                <h4 id="total"></h4>
-            </div>
-        </div>
-        <div class="chart-wrap chart3-wrap" style="background: transparent;" id="chart3"></div>
-        <div class="chart-wrap chart5-wrap" style="background: transparent;" id="chart5"></div>
-    </div>
-    <div class="center" id="domId">
-        <div class="btn-map" id="btnMap">
-            <a href="javascript:;" class="btn-item btn-item1">综合管理</a>
-            <a href="javascript:;" class="btn-item btn-item2">能耗管理</a>
-            <a href="javascript:;" class="btn-item btn-item3" style="margin-right:0">配电运维</a>
-        </div>
-        <div id="timeline">
-            <ul id="dates">
-                <li><a class="clockSet" href="#" data-set="colors3">5:00AM</a></li>
-                <li><a class="clockSet" href="#" data-set="colors4">9:00AM</a></li>
-                <li><a class="clockSet" href="#" data-set="colors5">13:00PM</a></li>
-                <li><a class="clockSet selected" href="#" data-set="colors1">17:00PM</a></li>
-                <li><a class="clockSet" href="#" data-set="colors2">21:00PM</a></li>
-            </ul>
-        </div>
-        <div id="viewMap" class="view-map"></div>
-    </div>
-    <div class="right">
-        <div class="chart-wrap">
-            <div class="chart1-data">
-                <div class="chart1-item">
-                    <h4>公区</h4>
-                    <div class="chart1-item-number">
-                        <span>40%</span> / 100%
-                    </div>
+<main class="content-wrap">
+    <div id="domId" class="dom-id"></div>
+    <div class="content">
+        <div class="left">
+            <div class="chart-wrap chart-circle-wrap">
+                <h4 class="chart-circle-title">
+                    今日用电分类
+                </h4>
+                <div class="chart-circle">
+                    <div class="circle-item" id="chartCircle1"></div>
+                    <div class="circle-item" id="chartCircle2"></div>
+                    <div class="circle-item" id="chartCircle3"></div>
                 </div>
-                <div class="chart1-item">
-                    <h4>自用区</h4>
-                    <div class="chart1-item-number">
-                        <span>80%</span> / 100%
-                    </div>
-                </div>
-                <div class="chart1-item">
-                    <h4>租区</h4>
-                    <div class="chart1-item-number">
-                        <span>40%</span> / 100%
-                    </div>
+                <div class="chart-circle">
+                    <div class="circle-item" id="chartCircle4"></div>
+                    <div class="circle-item" id="chartCircle5"></div>
+                    <div class="circle-item" id="chartCircle6"></div>
                 </div>
             </div>
-            <div id="chart1"></div>
+            <div class="today">
+                <div class="today-inner">
+                    <h5>今日用电</h5>
+                    <h4 id="total"></h4>
+                </div>
+            </div>
+            <div class="chart-wrap chart3-wrap" style="background: transparent;" id="chart3"></div>
+            <div class="chart-wrap chart5-wrap" style="background: transparent;" id="chart5"></div>
         </div>
-        <div class="chart-wrap chart2-wrap" id="chart2"></div>
-        <div class="chart-wrap chart3-wrap" style="height: 28vh" id="chart4"></div>
+        <div class="center">
+            <div class="btn-map" id="btnMap">
+                <a href="javascript:;" class="btn-item btn-item1">综合管理</a>
+                <a href="javascript:;" class="btn-item btn-item2">能耗管理</a>
+                <a href="javascript:;" class="btn-item btn-item3" style="margin-right:0">配电运维</a>
+            </div>
+            <div id="timeline">
+                <ul id="dates">
+                    <li><a class="clockSet" href="#" data-set="colors3">5:00AM</a></li>
+                    <li><a class="clockSet" href="#" data-set="colors4">9:00AM</a></li>
+                    <li><a class="clockSet" href="#" data-set="colors5">13:00PM</a></li>
+                    <li><a class="clockSet selected" href="#" data-set="colors1">17:00PM</a></li>
+                    <li><a class="clockSet" href="#" data-set="colors2">21:00PM</a></li>
+                </ul>
+            </div>
+            <div id="viewMap" class="view-map"></div>
+        </div>
+        <div class="right">
+            <div class="chart-wrap">
+                <div class="chart1-data">
+                    <div class="chart1-item">
+                        <h4>公区</h4>
+                        <div class="chart1-item-number">
+                            <span>40%</span> / 100%
+                        </div>
+                    </div>
+                    <div class="chart1-item">
+                        <h4>自用区</h4>
+                        <div class="chart1-item-number">
+                            <span>80%</span> / 100%
+                        </div>
+                    </div>
+                    <div class="chart1-item">
+                        <h4>租区</h4>
+                        <div class="chart1-item-number">
+                            <span>40%</span> / 100%
+                        </div>
+                    </div>
+                </div>
+                <div id="chart1"></div>
+            </div>
+            <div class="chart-wrap chart2-wrap" id="chart2"></div>
+            <div class="chart-wrap chart3-wrap" style="height: 28vh" id="chart4"></div>
+        </div>
     </div>
 </main>
-<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
-<script type="text/javascript" src="<%=htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
-<% } %>
 </body>
 
 </html>
